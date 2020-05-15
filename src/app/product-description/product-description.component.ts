@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-description',
@@ -7,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-<<<<<<< HEAD
   albumInfo;
 
-  constructor(private _productService: ProductService)  { }
+  constructor(private _productService: ProductService) { }
 
   ngOnInit() {
     this._productService.getAlbum(1).subscribe(
-      response => this.albumInfo = response,
-          );
-=======
-  constructor() { }
-
-  ngOnInit() {
->>>>>>> parent of 639cd0f... step 3
+      response => this.albumInfo = response
+    )
   }
 
 }
